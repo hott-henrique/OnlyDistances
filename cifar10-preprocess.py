@@ -5,11 +5,6 @@ import numpy as np
 import cv2 as ocv
 
 
-def display_image(img: np.ndarray, title: str = "Image"):
-    ocv.imshow(title, ocv.cvtColor(img, ocv.COLOR_RGB2BGR))
-    ocv.waitKey(0)
-    ocv.destroyAllWindows()
-
 def read_image_components(If: t.BinaryIO) -> tuple[int, np.ndarray, np.ndarray, np.ndarray]:
     label = int.from_bytes(If.read(1), byteorder="big")
     R = np.frombuffer(If.read(1024), dtype=np.uint8)
