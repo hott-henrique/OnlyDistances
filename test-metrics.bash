@@ -38,7 +38,7 @@ python3 distance-classifier.py \
 python3 distance-classifier.py \
     --cifar10-path .data/preprocess/cifar-10/ \
     --img-type gs \
-    --distance-metric cosine > .data/gs-cosine.stdout 2> .data/rgb-cosine.stderr &
+    --distance-metric cosine > .data/gs-cosine.stdout 2> .data/gs-cosine.stderr &
 
 wait $!
 
